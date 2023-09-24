@@ -1,0 +1,33 @@
+﻿
+@{
+    var value = "TestRazorPage with ViewData";
+}
+
+<h2>TestRazorPage</h2>
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@value</title>
+</head>
+<body>
+    <div>
+        ViewData Items are:- <br />
+        <table>
+            @if (ViewData["ViewDataItems"] != null)
+            {
+            foreach (string item in (List<string>)ViewData["ViewDataItems"])
+            {
+                <tr>
+                    <td>@item</td>
+                </tr>
+            }
+            }
+        </table>
+    </div>
+</body>
+</html>
+

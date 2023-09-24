@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "TestRazorPage with Access TempData";
+}
+
+@{
+    var value = "test description";
+}
+
+<h2>TestRazorPage</h2>
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@value</title>
+</head>
+<body>
+    <div>
+        Access TempData Items are:- <br />
+        <table>
+            @if (TempData["AccessTempDataItems"] != null)
+            {
+            foreach (string item in (List<string>)TempData["AccessTempDataItems"])
+            {
+                <tr>
+                    <td>@item</td>
+                </tr>
+            }
+            }
+        </table>
+    </div>
+</body>
+</html>
+

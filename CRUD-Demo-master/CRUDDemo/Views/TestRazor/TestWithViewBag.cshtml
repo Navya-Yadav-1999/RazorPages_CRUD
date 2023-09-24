@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "TestRazorPage with ViewBag";
+}
+
+@{
+    var value = "test description";
+}
+
+<h2>TestRazorPage</h2>
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@value</title>
+</head>
+<body>
+    <br/>
+    <div>
+        ViewBag Items are:- <br />
+        <table>
+            @if (ViewBag.TestViewBag != null)
+            {
+            foreach (string item in ViewBag.TestViewBag)
+            {
+                <tr>
+                    <td>@item</td>
+                </tr>
+            }
+            }
+        </table>
+    </div>
+</body>
+</html>
+
